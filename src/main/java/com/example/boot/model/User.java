@@ -12,7 +12,18 @@ public class User {
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Column(name = "birth_year")
+    private int birthYear;
+
+    @Column(name = "password")
+    private String password;
+
     public User() {
+    }
+
+    public User(String name, int birthYear) {
+        this.name = name;
+        this.birthYear = birthYear;
     }
 
     public User(String name) {
@@ -34,4 +45,18 @@ public class User {
     public void setName(String name) {
         this.name = name;
     }
+
+    public int getBirthYear() {
+        return birthYear;
+    }
+    public void setBirthYear(int birthYear) {
+        this.birthYear = birthYear;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
 }

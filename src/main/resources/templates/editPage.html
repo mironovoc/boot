@@ -38,7 +38,7 @@
             font-weight: 600;
         }
 
-        input[type="text"] {
+        input[type="text"], input[type="number"] {
             width: 100%;
             padding: 10px;
             border-radius: 5px;
@@ -92,6 +92,12 @@
 
         <label for="name">Name</label>
         <input type="text" name="name" id="name" th:value="${user.name}" required>
+
+        <label for="birthYear">Birth Year</label>
+        <input type="number" name="birthYear" id="birthYear" th:value="${user.birthYear}" required>
+
+        <label for="password">Password</label>
+        <input type="text" name="password" id="password" th:value="${user.password}" required>
 
         <!-- Кнопка для отправки формы: будет показывать "Create New User" для добавления и "Edit User" для редактирования -->
         <input type="submit" th:value="${user.id == null or user.id == 0} ? 'Create New User' : 'Edit User'">
